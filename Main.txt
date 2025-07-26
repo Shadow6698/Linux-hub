@@ -28,6 +28,72 @@ local Window = Rayfield:CreateWindow({
     }
 })
 
+-- Lista de localizações de teleporte
+local teleportLocations = {
+    ["salao"] = {name = "Salão de festa", cframe = CFrame.new(-76, 4, -123)},
+    ["sofa"] = {name = "Sofá da casa", cframe = CFrame.new(-82, 22, -128)},
+    ["doceria"] = {name = "Doceria", cframe = CFrame.new(-125, 6, -120)},
+    ["jogos"] = {name = "Sala de jogos", cframe = CFrame.new(-172, 1, -126)},
+    ["delegacia"] = {name = "Delegacia", cframe = CFrame.new(-121, 4, 31)},
+    ["hospital"] = {name = "Hospital", cframe = CFrame.new(-293, 4, 40)},
+    ["banco"] = {name = "Banco principal", cframe = CFrame.new(-358, 25, -143)},
+    ["bombeiros"] = {name = "Corpo de Bombeiros", cframe = CFrame.new(-469, 6, -122)},
+    ["cemiterio"] = {name = "Cemitério", cframe = CFrame.new(-486, 7, 56)},
+    ["escola"] = {name = "Escola", cframe = CFrame.new(-315, 6, 211)},
+    ["creche"] = {name = "Creche", cframe = CFrame.new(-157, 4, 125)},
+    ["caixas"] = {name = "Loja de caixas", cframe = CFrame.new(-162, 4, 268)},
+    ["lanches"] = {name = "Lanchonete", cframe = CFrame.new(-169, 20, 291)},
+    ["livraria"] = {name = "Livraria", cframe = CFrame.new(-129, 4, 259)},
+    ["celulares"] = {name = "Loja de Celulares", cframe = CFrame.new(-127, 21, 253)},
+    ["coffes"] = {name = "Cafeteria", cframe = CFrame.new(-96, 5, 250)},
+    ["veterinario"] = {name = "Veterinário", cframe = CFrame.new(-100, 22, 262)},
+    ["dentista"] = {name = "Dentista", cframe = CFrame.new(-53, 20, 268)},
+    ["banco2"] = {name = "Banco Secundário", cframe = CFrame.new(3, 4, 257)},
+    ["hotel"] = {name = "Hotel", cframe = CFrame.new(199, 2, 182)},
+    ["hamburgueria"] = {name = "Hamburgueria", cframe = CFrame.new(156, 8, 39)},
+    ["aeroporto"] = {name = "Aeroporto", cframe = CFrame.new(317, 7, 40)},
+    ["shopping"] = {name = "Shopping", cframe = CFrame.new(165, 5, -158)},
+    ["ap1"] = {name = "Apartamento 1", cframe = CFrame.new(-35, 20, -126)},
+    ["ap2"] = {name = "Apartamento 2", cframe = CFrame.new(-34, 37, -136)},
+    ["igreja"] = {name = "Igreja", cframe = CFrame.new(-64, 37, -192)},
+    ["praia1"] = {name = "Praia 1", cframe = CFrame.new(70, 8, -1433)},
+    ["praia2"] = {name = "Praia 2", cframe = CFrame.new(-218, 1, 760)},
+    ["praia3"] = {name = "Praia 3", cframe = CFrame.new(15, 4, 1460)},
+    ["abandonada"] = {name = "Casa Abandonada", cframe = CFrame.new(1044, 8, 54)},
+    ["maquinas"] = {name = "Sala das Máquinas", cframe = CFrame.new(235, 4, 813)},
+    ["iate"] = {name = "Iate", cframe = CFrame.new(-125, 33, 856)},
+    ["cabana"] = {name = "Cabana", cframe = CFrame.new(-249, 6, 1078)},
+    ["drones"] = {name = "Torres de Drones", cframe = CFrame.new(-680, 252, 762)},
+    ["fazenda1"] = {name = "Fazenda 1", cframe = CFrame.new(-851, 6, -57)},
+    ["fazenda2"] = {name = "Fazenda 2", cframe = CFrame.new(-863, 6, -375)},
+    ["praça"] = {name = "Praça Central", cframe = CFrame.new(-13, 6, -17)},
+    ["montanha"] = {name = "Montanha", cframe = CFrame.new(-580, 1, 1026)},
+    ["posto"] = {name = "Posto de Gasolina", cframe = CFrame.new(133, 2, -338)},
+    ["loja"] = {name = "Loja", cframe = CFrame.new(-39, 2, 255)},
+    ["parque"] = {name = "Parque", cframe = CFrame.new(180, 5, -173)}
+}
+
+-- Função de Teleporte
+local function teleportToLocation(cframe)
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = cframe
+        Rayfield:Notify({
+            Title = "🐧 Teleporte Realizado!",
+            Content = "Você foi teleportado com sucesso!",
+            Duration = 3,
+            Image = nil,
+        })
+    else
+        Rayfield:Notify({
+            Title = "❌ Erro no Teleporte",
+            Content = "Não foi possível teleportar. Tente novamente.",
+            Duration = 3,
+            Image = nil,
+        })
+    end
+end
+
 -- Criação das Abas
 local ScriptsTab = Window:CreateTab("📜 Scripts 🐧", nil)
 local AdminTab = Window:CreateTab("👑 Admin 🐧", nil)
@@ -39,6 +105,7 @@ local FarmsTab = Window:CreateTab("🌾 Farms 🐧", nil)
 local ToolsTab = Window:CreateTab("🔧 Tools 🐧", nil)
 local ImunesTab = Window:CreateTab("🛡️ Imunes 🐧", nil)
 local PlayersTab = Window:CreateTab("👤 Players 🐧", nil)
+local LocationsTab = Window:CreateTab("📍 Localizações 🐧", nil)
 
 -- Seções de Cada Aba
 local ScriptsSection = ScriptsTab:CreateSection("Principais Scripts")
@@ -51,6 +118,7 @@ local FarmsSection = FarmsTab:CreateSection("Scripts de Farm")
 local ToolsSection = ToolsTab:CreateSection("Ferramentas e Armas")
 local ImunesSection = ImunesTab:CreateSection("Proteções e Imunidades")
 local PlayersSection = PlayersTab:CreateSection("Métodos")
+local LocationsSection = LocationsTab:CreateSection("Teleporte Rápido")
 
 -- Notificação Inicial
 Rayfield:Notify({
@@ -89,8 +157,6 @@ ScriptsTab:CreateButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
     end,
 })
-
-
 
 ScriptsTab:CreateButton({
     Name = "Pesquisar Scripts",
@@ -743,6 +809,314 @@ PlayersTab:CreateButton({
     Name = "Player Informations",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/informations/main/Main.txt"))()
+    end,
+})
+
+-- Localizações - Seção Cidade
+LocationsTab:CreateSection("🏙️ Centro da Cidade")
+
+LocationsTab:CreateButton({
+    Name = "🎉 " .. teleportLocations["salao"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["salao"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏠 " .. teleportLocations["sofa"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["sofa"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🍰 " .. teleportLocations["doceria"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["doceria"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🎮 " .. teleportLocations["jogos"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["jogos"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🚔 " .. teleportLocations["delegacia"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["delegacia"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏥 " .. teleportLocations["hospital"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["hospital"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏦 " .. teleportLocations["banco"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["banco"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🚒 " .. teleportLocations["bombeiros"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["bombeiros"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "⚰️ " .. teleportLocations["cemiterio"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["cemiterio"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🎯 " .. teleportLocations["praça"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["praça"].cframe)
+    end,
+})
+
+-- Seção Educação e Serviços
+LocationsTab:CreateSection("🎓 Educação e Serviços")
+
+LocationsTab:CreateButton({
+    Name = "🏫 " .. teleportLocations["escola"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["escola"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "👶 " .. teleportLocations["creche"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["creche"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "📚 " .. teleportLocations["livraria"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["livraria"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🦷 " .. teleportLocations["dentista"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["dentista"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🐕 " .. teleportLocations["veterinario"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["veterinario"].cframe)
+    end,
+})
+
+-- Seção Comércio e Lazer
+LocationsTab:CreateSection("🛍️ Comércio e Lazer")
+
+LocationsTab:CreateButton({
+    Name = "📦 " .. teleportLocations["caixas"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["caixas"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🍔 " .. teleportLocations["lanches"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["lanches"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "📱 " .. teleportLocations["celulares"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["celulares"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "☕ " .. teleportLocations["coffes"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["coffes"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏦 " .. teleportLocations["banco2"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["banco2"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏨 " .. teleportLocations["hotel"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["hotel"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🍟 " .. teleportLocations["hamburgueria"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["hamburgueria"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "✈️ " .. teleportLocations["aeroporto"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["aeroporto"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🛒 " .. teleportLocations["shopping"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["shopping"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🛍️ " .. teleportLocations["loja"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["loja"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "⛽ " .. teleportLocations["posto"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["posto"].cframe)
+    end,
+})
+
+-- Seção Residencial
+LocationsTab:CreateSection("🏠 Área Residencial")
+
+LocationsTab:CreateButton({
+    Name = "🏢 " .. teleportLocations["ap1"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["ap1"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏢 " .. teleportLocations["ap2"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["ap2"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "⛪ " .. teleportLocations["igreja"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["igreja"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🎪 " .. teleportLocations["parque"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["parque"].cframe)
+    end,
+})
+
+-- Seção Praias e Áreas Naturais
+LocationsTab:CreateSection("🏖️ Praias e Natureza")
+
+LocationsTab:CreateButton({
+    Name = "🏖️ " .. teleportLocations["praia1"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["praia1"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏖️ " .. teleportLocations["praia2"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["praia2"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏖️ " .. teleportLocations["praia3"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["praia3"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "⛰️ " .. teleportLocations["montanha"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["montanha"].cframe)
+    end,
+})
+
+-- Seção Áreas Especiais
+LocationsTab:CreateSection("🎯 Áreas Especiais")
+
+LocationsTab:CreateButton({
+    Name = "🏚️ " .. teleportLocations["abandonada"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["abandonada"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "⚙️ " .. teleportLocations["maquinas"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["maquinas"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🛥️ " .. teleportLocations["iate"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["iate"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏕️ " .. teleportLocations["cabana"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["cabana"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🚁 " .. teleportLocations["drones"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["drones"].cframe)
+    end,
+})
+
+-- Seção Fazendas
+LocationsTab:CreateSection("🌾 Fazendas")
+
+LocationsTab:CreateButton({
+    Name = "🚜 " .. teleportLocations["fazenda1"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["fazenda1"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🚜 " .. teleportLocations["fazenda2"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["fazenda2"].cframe)
     end,
 })
 
