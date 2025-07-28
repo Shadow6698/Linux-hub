@@ -1,57 +1,4 @@
--- Scripts Brookhaven
-BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Gumball Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/JaozinScripts/Gumball-Hub/refs/heads/main/GumballHubRetorn2.1.1.1.lua"))()
-    end,
-})
-
-BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Sander X",
-    Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Sander-XY-35845"))()
-    end,
-})
-
-BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Chaos Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Venom-devX/ChaosHub/main/loader.lua"))()
-    end,
-})
-
-BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Rael Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt"))()
-    end,
-})
-
-BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Shadow Hub",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/realgengar/scripts/refs/heads/main/Gui%20Version.Lua"))()
-    end,
-})
-
-BrookhavenTab:CreateButton({
-    Name = "[Premium] IceHub (Precisa de Key)",
-    Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Orbit-x-IceHub-Loads-of-features-31605"))()
-    end,
-})
-
-BrookhavenTab:CreateButton({
-    Name = "[Velocidade] Speed Wave",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/vheiclespeed/main/Main.txt"))()
-    end,
-})
-
-BrookhavenTab:CreateButton({
-    Name = "[Duplicar] Duplicator Carros",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/kigredns/Flame-- Rayfield Load
+-- Rayfield Load
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 -- Janela Principal
@@ -148,17 +95,17 @@ local function teleportToLocation(cframe)
 end
 
 -- Criação das Abas
-local ScriptsTab = Window:CreateTab("🐧 Scripts 🐧", nil)
-local AdminTab = Window:CreateTab("🐧 Admin 🐧", nil)
-local ScriptsNovosTab = Window:CreateTab("🐧 Scripts Novos 🐧", nil)
-local BrookhavenTab = Window:CreateTab("🐧 Brookhaven 🐧", nil)
-local TrollTab = Window:CreateTab("🐧 Troll 🐧", nil)
-local ExtrasTab = Window:CreateTab("🐧 Extras 🐧", nil)
-local FarmsTab = Window:CreateTab("🐧 Farms 🐧", nil)
-local ToolsTab = Window:CreateTab("🐧 Tools 🐧", nil)
-local ImunesTab = Window:CreateTab("🐧 Imunes 🐧", nil)
-local PlayersTab = Window:CreateTab("🐧 Players 🐧", nil)
-local LocationsTab = Window:CreateTab("🐧 Localizações 🐧", nil)
+local ScriptsTab = Window:CreateTab("📜 Scripts 🐧", nil)
+local AdminTab = Window:CreateTab("👑 Admin 🐧", nil)
+local ScriptsNovosTab = Window:CreateTab("✨ Scripts Novos 🐧", nil)
+local BrookhavenTab = Window:CreateTab("🏘️ Brookhaven 🐧", nil)
+local TrollTab = Window:CreateTab("😈 Troll 🐧", nil)
+local ExtrasTab = Window:CreateTab("🎯 Extras 🐧", nil)
+local FarmsTab = Window:CreateTab("🌾 Farms 🐧", nil)
+local ToolsTab = Window:CreateTab("🔧 Tools 🐧", nil)
+local ImunesTab = Window:CreateTab("🛡️ Imunes 🐧", nil)
+local PlayersTab = Window:CreateTab("👤 Players 🐧", nil)
+local LocationsTab = Window:CreateTab("📍 Localizações 🐧", nil)
 
 -- Seções de Cada Aba
 local ScriptsSection = ScriptsTab:CreateSection("Principais Scripts")
@@ -191,154 +138,154 @@ Rayfield:Notify({
 
 -- Scripts Principais
 ScriptsTab:CreateButton({
-    Name = "[Emotes] Fê Emotes",
+    Name = "Fê Emotes",
     Callback = function()
         loadstring(game:HttpGet("https://scriptblox.com/raw/Brookhaven-RP-all-emotes-6849"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Universal] Ghost Hub",
+    Name = "Ghost Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Admin] Infinite Yield",
+    Name = "Infinite Yield",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/infiniteyieldv2/main/Main.txt"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Busca] Pesquisar Scripts",
+    Name = "Pesquisar Scripts",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/ScriptSearcher"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Brookhaven] R4D",
+    Name = "R4D",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/M1ZZ001/BrookhavenR4D/main/Brookhaven%20R4D%20Script"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Brookhaven] Rael Hub",
+    Name = "Rael Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Servidor] Save Servers",
+    Name = "Save Servers",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Sabe-servers/main/Main.txt"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Admin] Nameless Admin",
+    Name = "Nameless Admin",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Brookhaven] Sander X",
+    Name = "Sander X",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/kigredns/SanderXV4.2.2/refs/heads/main/New.lua"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Universal] System Broken",
+    Name = "System Broken",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Visualizar] View Itens",
+    Name = "View Itens",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/View-itens/main/main.txt"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Visualizar] View Players",
+    Name = "View Players",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/View/main/main.txt"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Trolling] Void",
+    Name = "Void",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Void-fe/main/main.txt"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Emotes] Freeze Emotes",
+    Name = "freeze emotes",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Lockemotes/main/Main.txt"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Universal] Tiger Hub",
+    Name = "Tiger Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/balintTheDevX/Tiger-X-V3/main/Tiger%20X%20V3.5%20Fixed"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Combat] Aimbot",
+    Name = "Aimbot",
     Callback = function()
         loadstring(game:HttpGet("https://pastebin.com/raw/qtZt0Nzb"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Universal] Hub Universal",
+    Name = "Hub Universal",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/scripthubekitten/SCRIPTHUBV3/main/SCRIPTHUBV3"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Universal] Salvatore",
+    Name = "Salvatore",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/RFR-R1CH4RD/Loader/main/Salvatore.lua"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Arte] Draw FE",
+    Name = "Draw FE",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Affexter/Programs/refs/heads/main/scripts/tooldrawFE.lua"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Duplicar] Multiplicar Tools",
+    Name = "Multiplicar Tools",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/kigredns/NeonDuplicator/refs/heads/main/Script.lua"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Brookhaven] Chaos Hub",
+    Name = "Chaos Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Venom-devX/ChaosHub/main/loader.lua"))()
     end,
 })
 
 ScriptsTab:CreateButton({
-    Name = "[Tempo] Rebobination",
+    Name = "Rebobination",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/rebobination/main/Main.txt"))()
     end,
@@ -346,77 +293,77 @@ ScriptsTab:CreateButton({
 
 -- Comandos Admin
 AdminTab:CreateButton({
-    Name = "[Admin] Nameless Admin",
+    Name = "Nameless Admin",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source.lua"))()
     end,
 })
 
 AdminTab:CreateButton({
-    Name = "[Admin] Infinite Yield",
+    Name = "Infinite Yield",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/infiniteyieldv2/main/Main.txt"))()
     end,
 })
 
 AdminTab:CreateButton({
-    Name = "[Admin] Reviz Admin",
+    Name = "Reviz Admin",
     Callback = function()
         loadstring(game:HttpGet("https://pastebin.com/raw/Caniwq2N"))()
     end,
 })
 
 AdminTab:CreateButton({
-    Name = "[Admin] CMD-X",
+    Name = "CMD-X",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))()
     end,
 })
 
 AdminTab:CreateButton({
-    Name = "[Admin] Fates Admin",
+    Name = "Fates Admin",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
     end,
 })
 
 AdminTab:CreateButton({
-    Name = "[Comandos] Angel Cmds",
+    Name = "Angel Cmds",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/angel-commands/main/Main.txt"))()
     end,
 })
 
 AdminTab:CreateButton({
-    Name = "[Proteção] AntKick",
+    Name = "AntKick",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/antkick/main/Main.txt"))()
     end,
 })
 
 AdminTab:CreateButton({
-    Name = "[Ajuda] /helpadm",
+    Name = "/helpadm",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/spawngenio/main/Main.txt"))()
     end,
 })
 
 AdminTab:CreateButton({
-    Name = "[Ajuda] helpbiel",
+    Name = "helpbiel",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/helpbiel/main/Main.txt"))()
     end,
 })
 
 AdminTab:CreateButton({
-    Name = "[Ajuda] helpangel",
+    Name = "helpangel",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/helpangel/main/Main.txt"))()
     end,
 })
 
 AdminTab:CreateButton({
-    Name = "[Ajuda] helpgeison",
+    Name = "helpgeison",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/helpgeison/main/Main.txt"))()
     end,
@@ -424,7 +371,7 @@ AdminTab:CreateButton({
 
 -- Scripts Novos
 ScriptsNovosTab:CreateButton({
-    Name = "[Combo] Combo Universal",
+    Name = "Combo Universal",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub"))()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/infiniteyieldv2/main/Main.txt"))()
@@ -432,7 +379,7 @@ ScriptsNovosTab:CreateButton({
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Combo] Combo de Brookhaven",
+    Name = "Combo de Brookhaven",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/JaozinScripts/Gumball-Hub/refs/heads/main/GumballHubRetorn2.1.1.1.lua"))()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt"))()
@@ -441,7 +388,7 @@ ScriptsNovosTab:CreateButton({
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Combo] Combo de Vazar KK",
+    Name = "Combo de Vazar KK",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Void-fe/main/main.txt"))()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Speed-2/main/Main.txt"))()
@@ -449,91 +396,91 @@ ScriptsNovosTab:CreateButton({
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Teleporte] TP Magic",
+    Name = "TP Magic",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/doctorestranho/main/Main.txt"))()
     end,
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Chat] CopyHub",
+    Name = "CopyHub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/copychat/main/Main.txt"))()
     end,
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Trolling] HeadSitHub",
+    Name = "HeadSitHub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/headsit/main/Main.txt"))()
     end,
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Auto] Bot",
+    Name = "Bot",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/bot/main/Main.txt"))()
     end,
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Info] Ping",
+    Name = "Ping",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/fpsgui/main/Main.txt"))()
     end,
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Utilidades] Hub de Utilidades",
+    Name = "Hub de Utilidades",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/utilidades/main/Main.txt"))()
     end,
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Universal] MagoByte Hub",
+    Name = "MagoByte Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/hubsecrety/main/Main.txt"))()
     end,
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Games] Hub Games",
+    Name = "Hub Games",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/hubofhubs/main/Main.txt"))()
     end,
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Universal] Rochips Scripts",
+    Name = "Rochips Scripts",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/rochipshub-v3-/main/Main.txt"))()
     end,
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Trolling] Bug Players",
+    Name = "Bug Players",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Glitch-fe-44756"))()
     end,
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Visual] Realistic FX",
+    Name = "Realistic FX",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-BrookHaven-UltraFX-44718"))()
     end,
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Chat] Spam Chat [No Abuse]",
+    Name = "Spam Chat [No Abuse]",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/spam/main/Main.txt"))()
     end,
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "[Casa] Unban House",
+    Name = "Unban House",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Main.txt/main/Main.txt"))()
     end,
@@ -541,112 +488,112 @@ ScriptsNovosTab:CreateButton({
 
 -- Scripts Brookhaven
 BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Gumball Hub",
+    Name = "Gumball Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/JaozinScripts/Gumball-Hub/refs/heads/main/GumballHubRetorn2.1.1.1.lua"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Sander X",
+    Name = "Sander X",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Sander-XY-35845"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Chaos Hub",
+    Name = "Chaos Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Venom-devX/ChaosHub/main/loader.lua"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Rael Hub",
+    Name = "Rael Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Shadow Hub",
+    Name = "Shadow Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/realgengar/scripts/refs/heads/main/Gui%20Version.Lua"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Premium] IceHub (Precisa de Key)",
+    Name = "IceHub (Precisa de Key)",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Orbit-x-IceHub-Loads-of-features-31605"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Velocidade] Speed Wave",
+    Name = "Speed Wave",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/vheiclespeed/main/Main.txt"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Duplicar] Duplicator Carros",
+    Name = "Duplicator Carros",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/kigredns/Flame-Object/refs/heads/main/script.lua"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Coquette Hub",
+    Name = "Coquette Hub",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Coquette-Hub-41921"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Yin Hub (executa Ayla Hub)",
+    Name = "Yin Hub (executa Ayla Hub)",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Yin-Hub-21835"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] SP Hub",
+    Name = "SP Hub",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-SP-Hub-New-Uptade-1o3v-33364"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Brutus Hub",
+    Name = "Brutus Hub",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-BRUTUS-HUB-REUPLOUD-44098"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Nytherune Hub",
+    Name = "Nytherune Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/wx-sources/spacecomm/refs/heads/main/nytheruneplus"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Demon Hub [só presta as abas com português]",
+    Name = "Demon Hub [só presta as abas com português]",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-DemoV-46268"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] Jeon Hub",
+    Name = "Jeon Hub",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Jeon-26588"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "[Brookhaven] UwU Hub",
+    Name = "UwU Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Execute666j/TESTE/refs/heads/main/zinac%20luraph.txt"))()
     end,
@@ -654,14 +601,14 @@ BrookhavenTab:CreateButton({
 
 -- Scripts de Troll
 TrollTab:CreateButton({
-    Name = "[Espionar] ChatSpy",
+    Name = "ChatSpy",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/spychat/main/Main.txt"))()
     end,
 })
 
 TrollTab:CreateButton({
-    Name = "[Trolling] Glue",
+    Name = "Glue",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/gluegui/main/Main.txt"))()
     end,
@@ -669,70 +616,70 @@ TrollTab:CreateButton({
 
 -- Scripts Extras
 ExtrasTab:CreateButton({
-    Name = "[Imortal] God Mode",
+    Name = "God Mode",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/godmode/main/Main.txt"))()
     end,
 })
 
 ExtrasTab:CreateButton({
-    Name = "[Escape] Evade",
+    Name = "Evade",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/evade/main/Main.txt"))()
     end,
 })
 
 ExtrasTab:CreateButton({
-    Name = "[Avatar] Modo Gigante",
+    Name = "Modo Gigante",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-FE-BIG-AVATAR-43381"))()
     end,
 })
 
 ExtrasTab:CreateButton({
-    Name = "[Avatar] Virar Bola KKJ",
+    Name = "Virar Bola KKJ",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-ball-rolL-9835"))()
     end,
 })
 
 ExtrasTab:CreateButton({
-    Name = "[Universal] c00lkid Hub",
+    Name = "c00lkid Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/COOLKIDHUB/main/Main.txt"))()
     end,
 })
 
 ExtrasTab:CreateButton({
-    Name = "[Tempo] Dia Infinito",
+    Name = "Dia Infinito",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/time-lock/main/README.md"))()
     end,
 })
 
 ExtrasTab:CreateButton({
-    Name = "[Executor] Angel Executor",
+    Name = "Angel Executor",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Executor-script/main/Main.txt"))()
     end,
 })
 
 ExtrasTab:CreateButton({
-    Name = "[Universal] Sky Hub",
+    Name = "Sky Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
     end,
 })
 
 ExtrasTab:CreateButton({
-    Name = "[Servidor] Rejoin",
+    Name = "Rejoin",
     Callback = function()
         game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
     end,
 })
 
 ExtrasTab:CreateButton({
-    Name = "[Servidor] Server Hop",
+    Name = "Server Hop",
     Callback = function()
         local Http = game:GetService("HttpService")
         local TPS = game:GetService("TeleportService")
@@ -757,7 +704,7 @@ ExtrasTab:CreateButton({
 })
 
 ExtrasTab:CreateButton({
-    Name = "[Movimento] Speed",
+    Name = "Speed",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Speed-2/main/Main.txt"))()
     end,
@@ -765,21 +712,21 @@ ExtrasTab:CreateButton({
 
 -- Scripts de Farm
 FarmsTab:CreateButton({
-    Name = "[Farm] Farm Ballon",
+    Name = "Farm Ballon",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/ballonfarm/main/Main.txt"))()
     end,
 })
 
 FarmsTab:CreateButton({
-    Name = "[Farm] AutoTickets",
+    Name = "AutoTickets",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/farmbrookhaven/main/Main.txt"))()
     end,
 })
 
 FarmsTab:CreateButton({
-    Name = "[Farm] RealzX Hub (HubFarms)",
+    Name = "RealzX Hub (HubFarms)",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-RealzXHub-New-Event-44226"))()
     end,
@@ -787,35 +734,35 @@ FarmsTab:CreateButton({
 
 -- Tools Scripts
 ToolsTab:CreateButton({
-    Name = "[Arma] Arma de Portais",
+    Name = "Arma de Portais",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Arma-de-portais-/main/Main.txt"))()
     end,
 })
 
 ToolsTab:CreateButton({
-    Name = "[Arma] Portal Gun",
+    Name = "Portal Gun",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Portal-gun-/main/Main.txt"))()
     end,
 })
 
 ToolsTab:CreateButton({
-    Name = "[Arma] Buraco Negro Tool",
+    Name = "Buraco Negro Tool",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Natural-Disaster-Survival-Blackhole-Tool-Control-Unanc*d-Parts-27791"))()
     end,
 })
 
 ToolsTab:CreateButton({
-    Name = "[Arma] Gravity Gun",
+    Name = "Gravity Gun",
     Callback = function()
         loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Telekinesis-12332"))()
     end,
 })
 
 ToolsTab:CreateButton({
-    Name = "[Arma] Ioio da Ladybug",
+    Name = "Ioio da Ladybug",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/ladybug/main/Main.txt"))()
     end,
@@ -823,14 +770,14 @@ ToolsTab:CreateButton({
 
 -- Scripts Imunes
 ImunesTab:CreateButton({
-    Name = "[Proteção] Ant Coquette Hub",
+    Name = "Ant Coquette Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/antbug/main/main.txt"))()
     end,
 })
 
 ImunesTab:CreateButton({
-    Name = "[Proteção] ant chaos hub",
+    Name = "ant chaos hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/removeplayers/main/Main.txt"))()
     end,
@@ -838,28 +785,28 @@ ImunesTab:CreateButton({
 
 -- Players > Métodos
 PlayersTab:CreateButton({
-    Name = "[Trazer] Bring",
+    Name = "Bring",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Bring/main/Main.txt"))()
     end,
 })
 
 PlayersTab:CreateButton({
-    Name = "[Matar] Kill Players",
+    Name = "Kill Players",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Kill/main/main.txt"))()
     end,
 })
 
 PlayersTab:CreateButton({
-    Name = "[Espionar] Hub de Espionar",
+    Name = "Hub de Espionar",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/guiview/main/Main.txt"))()
     end,
 })
 
 PlayersTab:CreateButton({
-    Name = "[Info] Player Informations",
+    Name = "Player Informations",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/informations/main/Main.txt"))()
     end,
