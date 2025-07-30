@@ -606,6 +606,13 @@ BrookhavenTab:CreateButton({
     end,
 })
 
+BrookhavenTab:CreateButton({
+    Name = "Suterium Hub (Precisa de Key)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/suterium-hub-com-key/main/Main.txt"))()
+    end,
+})
+
 -- Scripts de Troll
 TrollTab:CreateButton({
     Name = "ChatSpy",
