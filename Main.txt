@@ -486,6 +486,13 @@ ScriptsNovosTab:CreateButton({
     end,
 })
 
+ScriptsNovosTab:CreateButton({
+    Name = "99 Dias na Floresta",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/99days-or-floresty/main/Main.txt"))()
+    end,
+})
+
 -- Scripts Brookhaven
 BrookhavenTab:CreateButton({
     Name = "Gumball Hub",
