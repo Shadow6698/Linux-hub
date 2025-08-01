@@ -371,6 +371,13 @@ AdminTab:CreateButton({
 
 -- Scripts Novos
 ScriptsNovosTab:CreateButton({
+    Name = "NoSit [by carol]",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/nosit/main/Main.txt"))()
+    end,
+})
+
+ScriptsNovosTab:CreateButton({
     Name = "Combo Universal",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub"))()
