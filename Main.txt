@@ -371,7 +371,7 @@ AdminTab:CreateButton({
 
 -- Scripts Novos
 ScriptsNovosTab:CreateButton({
-    Name = "NoSit [by carol]",
+    Name = "NoSit[By carol]",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/nosit/main/Main.txt"))()
     end,
@@ -610,6 +610,13 @@ BrookhavenTab:CreateButton({
     Name = "Suterium Hub (Precisa de Key)",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/suterium-hub-com-key/main/Main.txt"))()
+    end,
+})
+
+BrookhavenTab:CreateButton({
+    Name = "Drip Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Drip-Client-45229"))()
     end,
 })
 
