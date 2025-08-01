@@ -459,13 +459,6 @@ ScriptsNovosTab:CreateButton({
 })
 
 ScriptsNovosTab:CreateButton({
-    Name = "Bug Players",
-    Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Glitch-fe-44756"))()
-    end,
-})
-
-ScriptsNovosTab:CreateButton({
     Name = "Realistic FX",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-BrookHaven-UltraFX-44718"))()
@@ -625,6 +618,13 @@ TrollTab:CreateButton({
     Name = "Glue",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/gluegui/main/Main.txt"))()
+    end,
+})
+
+TrollTab:CreateButton({
+    Name = "Bug Players",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/bugplayers/main/Main.txt"))()
     end,
 })
 
