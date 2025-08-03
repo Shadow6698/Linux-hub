@@ -495,7 +495,7 @@ ScriptsNovosTab:CreateButton({
 
 -- Scripts Brookhaven
 BrookhavenTab:CreateButton({
-    Name = "Furia Hub {by carol}",
+    Name = "Furia Hub",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Furia-Hub-47122"))()
     end,
@@ -649,7 +649,13 @@ TrollTab:CreateButton({
     end,
 })
 
--- NOVO SCRIPT ADICIONADO NA ABA TROLL
+TrollTab:CreateButton({
+    Name = "Limpar Chat",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-LIMPA-CHAT-47355"))()
+    end,
+})
+
 TrollTab:CreateButton({
     Name = "Invisível",
     Callback = function()
