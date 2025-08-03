@@ -495,6 +495,13 @@ ScriptsNovosTab:CreateButton({
 
 -- Scripts Brookhaven
 BrookhavenTab:CreateButton({
+    Name = "Furia Hub {by carol}",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Furia-Hub-47122"))()
+    end,
+})
+
+BrookhavenTab:CreateButton({
     Name = "Gumball Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/JaozinScripts/Gumball-Hub/refs/heads/main/GumballHubRetorn2.1.1.1.lua"))()
