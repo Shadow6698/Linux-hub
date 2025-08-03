@@ -495,14 +495,14 @@ ScriptsNovosTab:CreateButton({
 
 -- Scripts Brookhaven
 BrookhavenTab:CreateButton({
-    Name = "Fit Hub",
+    Name = "FHub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/OpenSourceEngine/Script/refs/heads/main/Brookhaven.lua"))()
     end,
 })
 
 BrookhavenTab:CreateButton({
-    Name = "Furia Hub {by carol}",
+    Name = "Furia Hub",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Furia-Hub-47122"))()
     end,
@@ -681,4 +681,499 @@ ExtrasTab:CreateButton({
 ExtrasTab:CreateButton({
     Name = "Evade",
     Callback = function()
-        loadstring(game:HttpGet
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/evade/main/Main.txt"))()
+    end,
+})
+
+ExtrasTab:CreateButton({
+    Name = "Modo Gigante",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-FE-BIG-AVATAR-43381"))()
+    end,
+})
+
+ExtrasTab:CreateButton({
+    Name = "Virar Bola KKJ",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-ball-rolL-9835"))()
+    end,
+})
+
+ExtrasTab:CreateButton({
+    Name = "c00lkid Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/COOLKIDHUB/main/Main.txt"))()
+    end,
+})
+
+ExtrasTab:CreateButton({
+    Name = "Dia Infinito",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/time-lock/main/README.md"))()
+    end,
+})
+
+ExtrasTab:CreateButton({
+    Name = "Angel Executor",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Executor-script/main/Main.txt"))()
+    end,
+})
+
+ExtrasTab:CreateButton({
+    Name = "Sky Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
+    end,
+})
+
+ExtrasTab:CreateButton({
+    Name = "Rejoin",
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer)
+    end,
+})
+
+ExtrasTab:CreateButton({
+    Name = "Server Hop",
+    Callback = function()
+        local Http = game:GetService("HttpService")
+        local TPS = game:GetService("TeleportService")
+        local Api = "https://games.roblox.com/v1/games/"
+
+        local _place = game.PlaceId
+        local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+        
+        function ListServers(cursor)
+            local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+            return Http:JSONDecode(Raw)
+        end
+
+        local Server, Next; repeat
+            local Servers = ListServers(Next)
+            Server = Servers.data[1]
+            Next = Servers.nextPageCursor
+        until Server
+
+        TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+    end,
+})
+
+ExtrasTab:CreateButton({
+    Name = "Speed",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Speed-2/main/Main.txt"))()
+    end,
+})
+
+-- Scripts de Farm
+FarmsTab:CreateButton({
+    Name = "Farm Ballon",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/ballonfarm/main/Main.txt"))()
+    end,
+})
+
+FarmsTab:CreateButton({
+    Name = "AutoTickets",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/farmbrookhaven/main/Main.txt"))()
+    end,
+})
+
+FarmsTab:CreateButton({
+    Name = "RealzX Hub (HubFarms)",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-RealzXHub-New-Event-44226"))()
+    end,
+})
+
+-- Tools Scripts
+ToolsTab:CreateButton({
+    Name = "Arma de Portais",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Arma-de-portais-/main/Main.txt"))()
+    end,
+})
+
+ToolsTab:CreateButton({
+    Name = "Portal Gun",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Portal-gun-/main/Main.txt"))()
+    end,
+})
+
+ToolsTab:CreateButton({
+    Name = "Buraco Negro Tool",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Natural-Disaster-Survival-Blackhole-Tool-Control-Unanc*d-Parts-27791"))()
+    end,
+})
+
+ToolsTab:CreateButton({
+    Name = "Gravity Gun",
+    Callback = function()
+        loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Telekinesis-12332"))()
+    end,
+})
+
+ToolsTab:CreateButton({
+    Name = "Ioio da Ladybug",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/ladybug/main/Main.txt"))()
+    end,
+})
+
+-- Scripts Imunes
+ImunesTab:CreateButton({
+    Name = "Ant Coquette Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/antcoquettehub/main/Main.txt"))()
+    end,
+})
+
+ImunesTab:CreateButton({
+    Name = "ant chaos hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/removeplayers/main/Main.txt"))()
+    end,
+})
+
+-- Players > Métodos
+PlayersTab:CreateButton({
+    Name = "Bring",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Bring/main/Main.txt"))()
+    end,
+})
+
+PlayersTab:CreateButton({
+    Name = "Kill Players",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Kill/main/main.txt"))()
+    end,
+})
+
+PlayersTab:CreateButton({
+    Name = "Hub de Espionar",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/guiview/main/Main.txt"))()
+    end,
+})
+
+PlayersTab:CreateButton({
+    Name = "Player Informations",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/informations/main/Main.txt"))()
+    end,
+})
+
+-- Localizações - Seção Cidade
+LocationsTab:CreateSection("🏙️ Centro da Cidade")
+
+LocationsTab:CreateButton({
+    Name = "🎉 " .. teleportLocations["salao"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["salao"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏠 " .. teleportLocations["sofa"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["sofa"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🍰 " .. teleportLocations["doceria"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["doceria"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🎮 " .. teleportLocations["jogos"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["jogos"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🚔 " .. teleportLocations["delegacia"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["delegacia"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏥 " .. teleportLocations["hospital"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["hospital"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏦 " .. teleportLocations["banco"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["banco"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🚒 " .. teleportLocations["bombeiros"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["bombeiros"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "⚰️ " .. teleportLocations["cemiterio"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["cemiterio"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🎯 " .. teleportLocations["praça"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["praça"].cframe)
+    end,
+})
+
+-- Seção Educação e Serviços
+LocationsTab:CreateSection("🎓 Educação e Serviços")
+
+LocationsTab:CreateButton({
+    Name = "🏫 " .. teleportLocations["escola"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["escola"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "👶 " .. teleportLocations["creche"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["creche"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "📚 " .. teleportLocations["livraria"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["livraria"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🦷 " .. teleportLocations["dentista"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["dentista"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🐕 " .. teleportLocations["veterinario"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["veterinario"].cframe)
+    end,
+})
+
+-- Seção Comércio e Lazer
+LocationsTab:CreateSection("🛍️ Comércio e Lazer")
+
+LocationsTab:CreateButton({
+    Name = "📦 " .. teleportLocations["caixas"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["caixas"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🍔 " .. teleportLocations["lanches"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["lanches"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "📱 " .. teleportLocations["celulares"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["celulares"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "☕ " .. teleportLocations["coffes"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["coffes"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏦 " .. teleportLocations["banco2"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["banco2"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏨 " .. teleportLocations["hotel"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["hotel"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🍟 " .. teleportLocations["hamburgueria"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["hamburgueria"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "✈️ " .. teleportLocations["aeroporto"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["aeroporto"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🛒 " .. teleportLocations["shopping"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["shopping"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🛍️ " .. teleportLocations["loja"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["loja"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "⛽ " .. teleportLocations["posto"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["posto"].cframe)
+    end,
+})
+
+-- Seção Residencial
+LocationsTab:CreateSection("🏠 Área Residencial")
+
+LocationsTab:CreateButton({
+    Name = "🏢 " .. teleportLocations["ap1"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["ap1"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏢 " .. teleportLocations["ap2"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["ap2"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "⛪ " .. teleportLocations["igreja"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["igreja"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🎪 " .. teleportLocations["parque"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["parque"].cframe)
+    end,
+})
+
+-- Seção Praias e Áreas Naturais
+LocationsTab:CreateSection("🏖️ Praias e Natureza")
+
+LocationsTab:CreateButton({
+    Name = "🏖️ " .. teleportLocations["praia1"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["praia1"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏖️ " .. teleportLocations["praia2"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["praia2"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏖️ " .. teleportLocations["praia3"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["praia3"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "⛰️ " .. teleportLocations["montanha"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["montanha"].cframe)
+    end,
+})
+
+-- Seção Áreas Especiais
+LocationsTab:CreateSection("🎯 Áreas Especiais")
+
+LocationsTab:CreateButton({
+    Name = "🏚️ " .. teleportLocations["abandonada"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["abandonada"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "⚙️ " .. teleportLocations["maquinas"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["maquinas"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🛥️ " .. teleportLocations["iate"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["iate"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🏕️ " .. teleportLocations["cabana"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["cabana"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🚁 " .. teleportLocations["drones"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["drones"].cframe)
+    end,
+})
+
+-- Seção Fazendas
+LocationsTab:CreateSection("🌾 Fazendas")
+
+LocationsTab:CreateButton({
+    Name = "🚜 " .. teleportLocations["fazenda1"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["fazenda1"].cframe)
+    end,
+})
+
+LocationsTab:CreateButton({
+    Name = "🚜 " .. teleportLocations["fazenda2"].name,
+    Callback = function()
+        teleportToLocation(teleportLocations["fazenda2"].cframe)
+    end,
+})
+
+print("🐧 Linux Hub V3 carregado com sucesso! - Criado por Nightmare")
