@@ -642,6 +642,14 @@ TrollTab:CreateButton({
     end,
 })
 
+-- NOVO SCRIPT ADICIONADO NA ABA TROLL
+TrollTab:CreateButton({
+    Name = "Invisível",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Avatar-invisible-45072"))()
+    end,
+})
+
 -- Scripts Extras
 ExtrasTab:CreateButton({
     Name = "God Mode",
