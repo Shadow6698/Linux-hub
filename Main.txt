@@ -106,6 +106,7 @@ local ToolsTab = Window:CreateTab("🔧 Tools 🐧", nil)
 local ImunesTab = Window:CreateTab("🛡️ Imunes 🐧", nil)
 local PlayersTab = Window:CreateTab("👤 Players 🐧", nil)
 local LocationsTab = Window:CreateTab("📍 Localizações 🐧", nil)
+local GhostHubTab = Window:CreateTab("👻 GhostHub Scripts 🐧", nil) -- NOVA ABA
 
 -- Seções de Cada Aba
 local ScriptsSection = ScriptsTab:CreateSection("Principais Scripts")
@@ -119,6 +120,7 @@ local ToolsSection = ToolsTab:CreateSection("Ferramentas e Armas")
 local ImunesSection = ImunesTab:CreateSection("Proteções e Imunidades")
 local PlayersSection = PlayersTab:CreateSection("Métodos")
 local LocationsSection = LocationsTab:CreateSection("Teleporte Rápido")
+local GhostHubSection = GhostHubTab:CreateSection("Scripts do GhostHub") -- NOVA SEÇÃO
 
 -- Notificação Inicial
 Rayfield:Notify({
@@ -134,6 +136,28 @@ Rayfield:Notify({
             end
         },
     },
+})
+
+-- Scripts GhostHub (NOVA SEÇÃO)
+GhostHubTab:CreateButton({
+    Name = "FE Emotes R15",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Bfe%20r15%20animation%20player%5D.lua"))()
+    end,
+})
+
+GhostHubTab:CreateButton({
+    Name = "Ghost Hub Principal",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub"))()
+    end,
+})
+
+GhostHubTab:CreateButton({
+    Name = "FE Animation Player",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/music/refs/heads/main/music%23%5Bscripts%5D/music%23%5Bmiscellaneous%5D/music%23%5Bfe%20r15%20animation%20player%5D.lua"))()
+    end,
 })
 
 -- Scripts Principais
@@ -647,6 +671,7 @@ BrookhavenTab:CreateButton({
         loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/024662d77ba14c23"))()
     end,
 })
+
 -- Scripts de Troll
 TrollTab:CreateButton({
     Name = "ChatSpy",
