@@ -495,6 +495,13 @@ ScriptsNovosTab:CreateButton({
 
 -- Scripts Brookhaven
 BrookhavenTab:CreateButton({
+    Name = "Shnmax Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Shnmaxhub-Better-Hub-Brookhaven-No-Keyless-47878"))()
+    end,
+})
+
+BrookhavenTab:CreateButton({
     Name = "FHub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/OpenSourceEngine/Script/refs/heads/main/Brookhaven.lua"))()
@@ -640,7 +647,6 @@ BrookhavenTab:CreateButton({
         loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/024662d77ba14c23"))()
     end,
 })
-
 -- Scripts de Troll
 TrollTab:CreateButton({
     Name = "ChatSpy",
