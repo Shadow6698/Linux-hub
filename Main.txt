@@ -535,7 +535,7 @@ BrookhavenTab:CreateButton({
 BrookhavenTab:CreateButton({
     Name = "Furia Hub",
     Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Furia-Hub-47122"))()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-FURIA-HUB-47441"))()
     end,
 })
 
