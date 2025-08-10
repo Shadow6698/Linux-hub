@@ -521,7 +521,7 @@ ScriptsNovosTab:CreateButton({
 BrookhavenTab:CreateButton({
     Name = "Shnmax Hub",
     Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-SHNMAX-HUB-AUGUST-UPDATE-NO-KEY-48141"))()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-SHNMAX-UPDATE-FIX-NO-KEYLESS-48289"))()
     end,
 })
 
