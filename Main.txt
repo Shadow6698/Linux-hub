@@ -652,9 +652,16 @@ BrookhavenTab:CreateButton({
 })
 
 BrookhavenTab:CreateButton({
-    Name = "Suterium Hub (Precisa de Key)",
+    Name = "Stelarium Hub v2",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/suterium-hub-com-key/main/Main.txt"))()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-STELARIUM-HUB-v2-48149"))()
+    end,
+})
+
+BrookhavenTab:CreateButton({
+    Name = "Stelarium Hub v2",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-STELARIUM-HUB-v2-48149"))()
     end,
 })
 
