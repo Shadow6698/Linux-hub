@@ -106,7 +106,7 @@ local ToolsTab = Window:CreateTab("🔧 Tools 🐧", nil)
 local ImunesTab = Window:CreateTab("🛡️ Imunes 🐧", nil)
 local PlayersTab = Window:CreateTab("👤 Players 🐧", nil)
 local LocationsTab = Window:CreateTab("📍 Localizações 🐧", nil)
-local GhostHubTab = Window:CreateTab("👻 GhostHub Scripts 🐧", nil) -- NOVA ABA
+local GhostHubTab = Window:CreateTab("👻 GhostHub Scripts 🐧", nil)
 
 -- Seções de Cada Aba
 local ScriptsSection = ScriptsTab:CreateSection("Principais Scripts")
@@ -120,7 +120,7 @@ local ToolsSection = ToolsTab:CreateSection("Ferramentas e Armas")
 local ImunesSection = ImunesTab:CreateSection("Proteções e Imunidades")
 local PlayersSection = PlayersTab:CreateSection("Métodos")
 local LocationsSection = LocationsTab:CreateSection("Teleporte Rápido")
-local GhostHubSection = GhostHubTab:CreateSection("Scripts do GhostHub") -- NOVA SEÇÃO
+local GhostHubSection = GhostHubTab:CreateSection("Scripts do GhostHub")
 
 -- Notificação Inicial
 Rayfield:Notify({
@@ -138,7 +138,7 @@ Rayfield:Notify({
     },
 })
 
--- Scripts GhostHub (NOVA SEÇÃO)
+-- Scripts GhostHub
 GhostHubTab:CreateButton({
     Name = "FE Emotes R15",
     Callback = function()
@@ -705,6 +705,13 @@ TrollTab:CreateButton({
     Name = "Invisível",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Avatar-invisible-45072"))()
+    end,
+})
+
+TrollTab:CreateButton({
+    Name = "Bug Server [/bug all /remove bug]",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/bug-all/main/Main.txt"))()
     end,
 })
 
