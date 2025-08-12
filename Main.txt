@@ -107,6 +107,7 @@ local ImunesTab = Window:CreateTab("🛡️ Imunes 🐧", nil)
 local PlayersTab = Window:CreateTab("👤 Players 🐧", nil)
 local LocationsTab = Window:CreateTab("📍 Localizações 🐧", nil)
 local GhostHubTab = Window:CreateTab("👻 GhostHub Scripts 🐧", nil)
+local DesastresTab = Window:CreateTab("🌪️ Desastres Naturais 🐧", nil)
 
 -- Seções de Cada Aba
 local ScriptsSection = ScriptsTab:CreateSection("Principais Scripts")
@@ -121,6 +122,7 @@ local ImunesSection = ImunesTab:CreateSection("Proteções e Imunidades")
 local PlayersSection = PlayersTab:CreateSection("Métodos")
 local LocationsSection = LocationsTab:CreateSection("Teleporte Rápido")
 local GhostHubSection = GhostHubTab:CreateSection("Scripts do GhostHub")
+local DesastresSection = DesastresTab:CreateSection("Scripts Desastres Naturais")
 
 -- Notificação Inicial
 Rayfield:Notify({
@@ -136,6 +138,63 @@ Rayfield:Notify({
             end
         },
     },
+})
+
+-- NOVA ABA - Scripts Desastres Naturais
+DesastresTab:CreateButton({
+    Name = "🌟 Hub Novo",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/9NLK7/93qjoadnlaknwldk/main/main'))()
+    end,
+})
+
+DesastresTab:CreateButton({
+    Name = "🌪️ NDS Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringUjHI6RQpz2o8", true))()
+    end,
+})
+
+DesastresTab:CreateButton({
+    Name = "🌐 Gravity",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/96XzjEiK"))()
+    end,
+})
+
+DesastresTab:CreateButton({
+    Name = "🏔️ Natural Disaster Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Codexxscripts/Script/refs/heads/main/Protected_7867058958573066.lua.txt"))()
+    end,
+})
+
+DesastresTab:CreateButton({
+    Name = "🔥 Flames Hub",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EnterpriseExperience/MicUpSource/refs/heads/main/retrieve_branch_version.lua')))()
+    end,
+})
+
+DesastresTab:CreateButton({
+    Name = "👋 Touch Fling",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastefy.app/59mJGQGe/raw"))()
+    end,
+})
+
+DesastresTab:CreateButton({
+    Name = "🕳️ Black Hole",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/7V8KH60M"))()
+    end,
+})
+
+DesastresTab:CreateButton({
+    Name = "🌪️ Tornado de Blocos",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/W6fcvJYL"))()
+    end,
 })
 
 -- Scripts GhostHub
@@ -619,7 +678,7 @@ BrookhavenTab:CreateButton({
 BrookhavenTab:CreateButton({
     Name = "Brutus Hub",
     Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-BRUTUS-HUB-REUPLOUD-44098"))()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-BRUTUS-HUB-UPDATE-NO-KEY-45004"))()
     end,
 })
 
