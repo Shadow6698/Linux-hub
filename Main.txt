@@ -112,6 +112,7 @@ local FlorestaTab = Window:CreateTab("🌲 99 Noites na Floresta 🐧", nil)
 local RivalsTab = Window:CreateTab("⚔️ Rivals 🐧", nil)
 local MMTab = Window:CreateTab("🔪 Murder Mystery 🐧", nil)
 local PrisonTab = Window:CreateTab("🏢 Prison Life 🐧", nil)
+local R6R15Tab = Window:CreateTab("🤖 R6 ou R15 🐧", nil)
 
 -- Seções de Cada Aba
 local ScriptsSection = ScriptsTab:CreateSection("Principais Scripts")
@@ -131,6 +132,7 @@ local FlorestaSection = FlorestaTab:CreateSection("Scripts 99 Noites na Floresta
 local RivalsSection = RivalsTab:CreateSection("Scripts Rivals")
 local MMSection = MMTab:CreateSection("Scripts Murder Mystery")
 local PrisonSection = PrisonTab:CreateSection("Scripts Prison Life")
+local R6R15Section = R6R15Tab:CreateSection("Scripts de Animações R6/R15")
 
 -- Notificação Inicial
 Rayfield:Notify({
@@ -146,6 +148,56 @@ Rayfield:Notify({
             end
         },
     },
+})
+
+-- NOVA ABA - Scripts R6 ou R15
+R6R15Tab:CreateButton({
+    Name = "🐉 l0rdDr4k3r GUI",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Xym..."))()
+    end,
+})
+
+R6R15Tab:CreateButton({
+    Name = "😄 Emotes Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Fsploit/FeAnimationHub/refs/heads/main/Hub.lua"))()
+    end,
+})
+
+R6R15Tab:CreateButton({
+    Name = "🔪 Grab Knife (pode não funcionar)",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Grab-knife-v4-24753"))()
+    end,
+})
+
+R6R15Tab:CreateButton({
+    Name = "💀 Death Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Die-of-Death-Red-Hub-35696"))()
+    end,
+})
+
+R6R15Tab:CreateButton({
+    Name = "🤖 R6 Animation",
+    Callback = function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/1p6xnBNf'),true))()
+    end,
+})
+
+R6R15Tab:CreateButton({
+    Name = "⚡ FE Forsaken",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/qwertys/refs/heads/main/qwerty0.lua"))()
+    end,
+})
+
+R6R15Tab:CreateButton({
+    Name = "🕺 Animation Tools",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Scripts/refs/heads/main/Epik%20R6%20Dancezz"))()
+    end,
 })
 
 -- NOVA ABA - Scripts 99 Noites na Floresta
