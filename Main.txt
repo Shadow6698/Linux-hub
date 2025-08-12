@@ -629,7 +629,7 @@ AdminTab:CreateButton({
 })
 
 AdminTab:CreateButton({
-    Name = "Angel Cmds",
+    Name = "Linux cmds",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/angel-commands/main/Main.txt"))()
     end,
