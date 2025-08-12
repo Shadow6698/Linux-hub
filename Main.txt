@@ -356,7 +356,14 @@ PrisonTab:CreateButton({
     end,
 })
 
--- Scripts GhostHub
+-- Scripts GhostHub (COM KEYBOARD DELTA ADICIONADO)
+GhostHubTab:CreateButton({
+    Name = "⌨️ Keyboard Delta",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Xxtan31/Ata/main/deltakeyboardcrack.txt", true))()
+    end,
+})
+
 GhostHubTab:CreateButton({
     Name = "FE Emotes R15",
     Callback = function()
