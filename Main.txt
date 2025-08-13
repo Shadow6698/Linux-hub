@@ -686,6 +686,13 @@ ScriptsNovosTab:CreateButton({
 })
 
 ScriptsNovosTab:CreateButton({
+    Name = "Chat Bypass",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-byterpass-CHAT-BYPASSER-47366"))()
+    end,
+})
+
+ScriptsNovosTab:CreateButton({
     Name = "Combo Universal",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub"))()
