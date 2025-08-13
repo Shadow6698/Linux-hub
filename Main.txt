@@ -679,6 +679,13 @@ ScriptsNovosTab:CreateButton({
 })
 
 ScriptsNovosTab:CreateButton({
+    Name = "Flash",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Speed-2/main/Main.txt"))()
+    end,
+})
+
+ScriptsNovosTab:CreateButton({
     Name = "Combo Universal",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub"))()
@@ -1071,13 +1078,6 @@ ExtrasTab:CreateButton({
         until Server
 
         TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
-    end,
-})
-
-ExtrasTab:CreateButton({
-    Name = "Flash",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Speed-2/main/Main.txt"))()
     end,
 })
 
