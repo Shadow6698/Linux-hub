@@ -1075,7 +1075,7 @@ ExtrasTab:CreateButton({
 })
 
 ExtrasTab:CreateButton({
-    Name = "Speed",
+    Name = "Flash",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/Speed-2/main/Main.txt"))()
     end,
