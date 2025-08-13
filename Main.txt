@@ -803,6 +803,13 @@ ScriptsNovosTab:CreateButton({
 
 -- Scripts Brookhaven
 BrookhavenTab:CreateButton({
+    Name = "Linux Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/linuxv2/refs/heads/main/Main.txt"))()
+    end,
+})
+
+BrookhavenTab:CreateButton({
     Name = "Shnmax Hub",
     Callback = function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-SHNMAX-UPDATE-FIX-NO-KEYLESS-48289"))()
@@ -953,6 +960,13 @@ BrookhavenTab:CreateButton({
     Name = "Cartola Hub",
     Callback = function()
         loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/024662d77ba14c23"))()
+    end,
+})
+
+BrookhavenTab:CreateButton({
+    Name = "RH Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-RH-Hub-48490"))()
     end,
 })
 
