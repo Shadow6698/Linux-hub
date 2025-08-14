@@ -24,6 +24,51 @@ local Window = WindUI:CreateWindow({
     },
 })
 
+-- Lista de localizações de teleporte
+local teleportLocations = {
+    ["salao"] = {name = "Salão de festa", cframe = CFrame.new(-76, 4, -123)},
+    ["sofa"] = {name = "Sofá da casa", cframe = CFrame.new(-82, 22, -128)},
+    ["doceria"] = {name = "Doceria", cframe = CFrame.new(-125, 6, -120)},
+    ["jogos"] = {name = "Sala de jogos", cframe = CFrame.new(-172, 1, -126)},
+    ["delegacia"] = {name = "Delegacia", cframe = CFrame.new(-121, 4, 31)},
+    ["hospital"] = {name = "Hospital", cframe = CFrame.new(-293, 4, 40)},
+    ["banco"] = {name = "Banco principal", cframe = CFrame.new(-358, 25, -143)},
+    ["bombeiros"] = {name = "Corpo de Bombeiros", cframe = CFrame.new(-469, 6, -122)},
+    ["cemiterio"] = {name = "Cemitério", cframe = CFrame.new(-486, 7, 56)},
+    ["escola"] = {name = "Escola", cframe = CFrame.new(-315, 6, 211)},
+    ["creche"] = {name = "Creche", cframe = CFrame.new(-157, 4, 125)},
+    ["caixas"] = {name = "Loja de caixas", cframe = CFrame.new(-162, 4, 268)},
+    ["lanches"] = {name = "Lanchonete", cframe = CFrame.new(-169, 20, 291)},
+    ["livraria"] = {name = "Livraria", cframe = CFrame.new(-129, 4, 259)},
+    ["celulares"] = {name = "Loja de Celulares", cframe = CFrame.new(-127, 21, 253)},
+    ["coffes"] = {name = "Cafeteria", cframe = CFrame.new(-96, 5, 250)},
+    ["veterinario"] = {name = "Veterinário", cframe = CFrame.new(-100, 22, 262)},
+    ["dentista"] = {name = "Dentista", cframe = CFrame.new(-53, 20, 268)},
+    ["banco2"] = {name = "Banco Secundário", cframe = CFrame.new(3, 4, 257)},
+    ["hotel"] = {name = "Hotel", cframe = CFrame.new(199, 2, 182)},
+    ["hamburgueria"] = {name = "Hamburgueria", cframe = CFrame.new(156, 8, 39)},
+    ["aeroporto"] = {name = "Aeroporto", cframe = CFrame.new(317, 7, 40)},
+    ["shopping"] = {name = "Shopping", cframe = CFrame.new(165, 5, -158)},
+    ["ap1"] = {name = "Apartamento 1", cframe = CFrame.new(-35, 20, -126)},
+    ["ap2"] = {name = "Apartamento 2", cframe = CFrame.new(-34, 37, -136)},
+    ["igreja"] = {name = "Igreja", cframe = CFrame.new(-64, 37, -192)},
+    ["praia1"] = {name = "Praia 1", cframe = CFrame.new(70, 8, -1433)},
+    ["praia2"] = {name = "Praia 2", cframe = CFrame.new(-218, 1, 760)},
+    ["praia3"] = {name = "Praia 3", cframe = CFrame.new(15, 4, 1460)},
+    ["abandonada"] = {name = "Casa Abandonada", cframe = CFrame.new(1044, 8, 54)},
+    ["maquinas"] = {name = "Sala das Máquinas", cframe = CFrame.new(235, 4, 813)},
+    ["iate"] = {name = "Iate", cframe = CFrame.new(-125, 33, 856)},
+    ["cabana"] = {name = "Cabana", cframe = CFrame.new(-249, 6, 1078)},
+    ["drones"] = {name = "Torres de Drones", cframe = CFrame.new(-680, 252, 762)},
+    ["fazenda1"] = {name = "Fazenda 1", cframe = CFrame.new(-851, 6, -57)},
+    ["fazenda2"] = {name = "Fazenda 2", cframe = CFrame.new(-863, 6, -375)},
+    ["praça"] = {name = "Praça Central", cframe = CFrame.new(-13, 6, -17)},
+    ["montanha"] = {name = "Montanha", cframe = CFrame.new(-580, 1, 1026)},
+    ["posto"] = {name = "Posto de Gasolina", cframe = CFrame.new(133, 2, -338)},
+    ["loja"] = {name = "Loja", cframe = CFrame.new(-39, 2, 255)},
+    ["parque"] = {name = "Parque", cframe = CFrame.new(180, 5, -173)}
+}
+
 -- Criação das abas
 local ScriptsTab = Window:Tab({
     Title = "📜 Scripts",
@@ -46,6 +91,12 @@ local ScriptsNovosTab = Window:Tab({
 local BrookhavenTab = Window:Tab({
     Title = "🏘️ Brookhaven",
     Icon = "home",
+    Locked = false,
+})
+
+local TeleportTab = Window:Tab({
+    Title = "🚀 Teleporte",
+    Icon = "map-pin",
     Locked = false,
 })
 
@@ -142,6 +193,464 @@ WindUI:Notify({
 Window:Tag({
     Title = "v3.0.0",
     Color = Color3.fromHex("#30ff6a")
+})
+
+-- ==============================
+-- ABA DE TELEPORTE
+-- ==============================
+
+local TeleportSection = TeleportTab:Section({
+    Title = "Localizações de Teleporte",
+    TextXAlignment = "Left",
+    TextSize = 17,
+})
+
+-- Função de teleporte
+local function teleportTo(location)
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = location.cframe
+        WindUI:Notify({
+            Title = "🚀 Teleportado!",
+            Content = "Você foi teleportado para: " .. location.name,
+            Duration = 3,
+            Icon = "map-pin",
+        })
+    end
+end
+
+-- Botões de teleporte organizados por categorias
+
+-- Locais Principais
+TeleportTab:Section({
+    Title = "🏛️ Locais Principais",
+    TextXAlignment = "Left",
+    TextSize = 16,
+})
+
+TeleportTab:Button({
+    Title = "Salão de Festa",
+    Desc = "Teleportar para o salão de festa",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["salao"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Praça Central",
+    Desc = "Teleportar para a praça central",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["praça"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Shopping",
+    Desc = "Teleportar para o shopping",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["shopping"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Aeroporto",
+    Desc = "Teleportar para o aeroporto",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["aeroporto"])
+    end
+})
+
+-- Serviços Públicos
+TeleportTab:Section({
+    Title = "🏥 Serviços Públicos",
+    TextXAlignment = "Left",
+    TextSize = 16,
+})
+
+TeleportTab:Button({
+    Title = "Hospital",
+    Desc = "Teleportar para o hospital",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["hospital"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Delegacia",
+    Desc = "Teleportar para a delegacia",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["delegacia"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Corpo de Bombeiros",
+    Desc = "Teleportar para os bombeiros",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["bombeiros"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Escola",
+    Desc = "Teleportar para a escola",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["escola"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Creche",
+    Desc = "Teleportar para a creche",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["creche"])
+    end
+})
+
+-- Estabelecimentos Comerciais
+TeleportTab:Section({
+    Title = "🏪 Estabelecimentos",
+    TextXAlignment = "Left",
+    TextSize = 16,
+})
+
+TeleportTab:Button({
+    Title = "Banco Principal",
+    Desc = "Teleportar para o banco principal",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["banco"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Banco Secundário",
+    Desc = "Teleportar para o banco secundário",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["banco2"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Doceria",
+    Desc = "Teleportar para a doceria",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["doceria"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Hamburgueria",
+    Desc = "Teleportar para a hamburgueria",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["hamburgueria"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Lanchonete",
+    Desc = "Teleportar para a lanchonete",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["lanches"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Cafeteria",
+    Desc = "Teleportar para a cafeteria",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["coffes"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Hotel",
+    Desc = "Teleportar para o hotel",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["hotel"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Posto de Gasolina",
+    Desc = "Teleportar para o posto",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["posto"])
+    end
+})
+
+-- Lojas
+TeleportTab:Section({
+    Title = "🛍️ Lojas",
+    TextXAlignment = "Left",
+    TextSize = 16,
+})
+
+TeleportTab:Button({
+    Title = "Loja de Caixas",
+    Desc = "Teleportar para a loja de caixas",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["caixas"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Livraria",
+    Desc = "Teleportar para a livraria",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["livraria"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Loja de Celulares",
+    Desc = "Teleportar para a loja de celulares",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["celulares"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Loja Geral",
+    Desc = "Teleportar para a loja",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["loja"])
+    end
+})
+
+-- Serviços Médicos
+TeleportTab:Section({
+    Title = "🏥 Serviços Médicos",
+    TextXAlignment = "Left",
+    TextSize = 16,
+})
+
+TeleportTab:Button({
+    Title = "Veterinário",
+    Desc = "Teleportar para o veterinário",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["veterinario"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Dentista",
+    Desc = "Teleportar para o dentista",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["dentista"])
+    end
+})
+
+-- Residências
+TeleportTab:Section({
+    Title = "🏠 Residências",
+    TextXAlignment = "Left",
+    TextSize = 16,
+})
+
+TeleportTab:Button({
+    Title = "Sofá da Casa",
+    Desc = "Teleportar para o sofá da casa",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["sofa"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Apartamento 1",
+    Desc = "Teleportar para o apartamento 1",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["ap1"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Apartamento 2",
+    Desc = "Teleportar para o apartamento 2",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["ap2"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Casa Abandonada",
+    Desc = "Teleportar para a casa abandonada",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["abandonada"])
+    end
+})
+
+-- Entretenimento
+TeleportTab:Section({
+    Title = "🎮 Entretenimento",
+    TextXAlignment = "Left",
+    TextSize = 16,
+})
+
+TeleportTab:Button({
+    Title = "Sala de Jogos",
+    Desc = "Teleportar para a sala de jogos",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["jogos"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Igreja",
+    Desc = "Teleportar para a igreja",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["igreja"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Cemitério",
+    Desc = "Teleportar para o cemitério",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["cemiterio"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Parque",
+    Desc = "Teleportar para o parque",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["parque"])
+    end
+})
+
+-- Áreas Externas
+TeleportTab:Section({
+    Title = "🌊 Áreas Externas",
+    TextXAlignment = "Left",
+    TextSize = 16,
+})
+
+TeleportTab:Button({
+    Title = "Praia 1",
+    Desc = "Teleportar para a praia 1",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["praia1"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Praia 2",
+    Desc = "Teleportar para a praia 2",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["praia2"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Praia 3",
+    Desc = "Teleportar para a praia 3",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["praia3"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Iate",
+    Desc = "Teleportar para o iate",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["iate"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Cabana",
+    Desc = "Teleportar para a cabana",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["cabana"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Montanha",
+    Desc = "Teleportar para a montanha",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["montanha"])
+    end
+})
+
+-- Fazendas e Áreas Especiais
+TeleportTab:Section({
+    Title = "🚜 Fazendas & Especiais",
+    TextXAlignment = "Left",
+    TextSize = 16,
+})
+
+TeleportTab:Button({
+    Title = "Fazenda 1",
+    Desc = "Teleportar para a fazenda 1",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["fazenda1"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Fazenda 2",
+    Desc = "Teleportar para a fazenda 2",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["fazenda2"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Sala das Máquinas",
+    Desc = "Teleportar para a sala das máquinas",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["maquinas"])
+    end
+})
+
+TeleportTab:Button({
+    Title = "Torres de Drones",
+    Desc = "Teleportar para as torres de drones",
+    Locked = false,
+    Callback = function()
+        teleportTo(teleportLocations["drones"])
+    end
 })
 
 -- ==============================
