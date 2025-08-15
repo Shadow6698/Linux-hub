@@ -1098,11 +1098,11 @@ ScriptsNovosTab:Button({
 })
 
 ScriptsNovosTab:Button({
-    Title = "Spam Chat [No Abuse]",
-    Desc = "Sistema de spam responsável",
+    Title = "Spider Man",
+    Desc = "Script do Homem-Aranha",
     Locked = false,
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/spam/main/Main.txt"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Shadow6698/spidermanv2/refs/heads/main/Main.txt"))()
     end
 })
 
